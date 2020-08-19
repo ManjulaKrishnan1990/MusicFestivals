@@ -1,0 +1,23 @@
+<a href="#" class = "list-group-item clearfix"  (click) = "selectedRecipe()">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+        <p  class="list-group-item-text">{{recipe.description}}</p>
+        <!-- <p appBasicHeighlight>The Basic Directive</p>
+        <p appBetterHeighlight [defaultColor] ="'yellow'" [heighlightColor] = "'red'">Style me with Better heighlight</p>
+        <div *appUnless = "isDisplay">
+            <li>1</li>
+            <li>2</li>
+        </div> -->
+    </div>
+    <span class="pull-right">
+        <img  
+        alt = "{{recipe.imagePath}}" 
+        [src]="recipe.imagePath" 
+        style = "max-height: 50px;" class="image-responsive">
+    </span>
+    <!-- <div [ngSwitch] = "value">
+        <p *ngSwitchCase = "5">Value is 5</p>
+        <p *ngSwitchCase = "">Value is 10</p>
+        <p *ngSwitchCase = "100">Value is 100</p>
+    </div> -->
+</a>

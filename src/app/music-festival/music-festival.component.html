@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li class="list-group-item" style = "margin-bottom: 20px;" *ngFor = "let record of records" >
+        {{record.record_name}}
+        <ul >
+          <li  *ngFor = "let band of getBands(record.record_id)" >
+             {{band.band_name}}
+            <ul>
+              <li *ngFor = "let festival of getFestival(band.band_id)" >
+             {{festival.festival_name}}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!--<img
+      [src]="recipe.imagePath"
+      alt="{{ recipe.name }}"
+      class="img-responsive"
+      style="max-height: 300px;">-->
+  </div>
+</div>
+
