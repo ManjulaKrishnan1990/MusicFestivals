@@ -40,7 +40,7 @@ describe('MusicFestivalServices', () => {
      expect(musicalRecords.length).toEqual(4);
     });
 
-    const req = httpMock.expectOne(`http://localhost:8080/MusicFestival/music/api/v1/festivals`);
+    const req = httpMock.expectOne(`http://e9ac531f4f4f.ngrok.io/MusicFestival/music/api/v1/festivals`);
     expect(req.request.method).toBe("GET");
     req.flush(records);
   });

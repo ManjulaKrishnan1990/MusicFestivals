@@ -14,7 +14,7 @@ export class MusicFestivalServices {
   }
 
   loadMusicFestival() {
-    const url = `http://localhost:8080/MusicFestival/music/api/v1/festivals`;
+    const url = `http://e9ac531f4f4f.ngrok.io/MusicFestival/music/api/v1/festivals`;
     return this.http
       .get(url)
       .pipe(
@@ -23,7 +23,7 @@ export class MusicFestivalServices {
   }
 
   getDagetMusicFestivalData() {
-    return this.http.get<any>(`http://localhost:8080/MusicFestival/music/api/v1/festivals`);
+    return this.http.get<any>(`http://e9ac531f4f4f.ngrok.io/MusicFestival/music/api/v1/festivals`);
   }
 
   private handleError(error: any): Promise<any> {
