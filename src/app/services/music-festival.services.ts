@@ -22,6 +22,10 @@ export class MusicFestivalServices {
         catchError(this.handleError),)
   }
 
+  getDagetMusicFestivalData() {
+    return this.http.get<any>(`http://localhost:8080/MusicFestival/music/api/v1/festivals`);
+  }
+
   private handleError(error: any): Promise<any> {
     console.error('Animals API error', error);
     return Promise.reject(error);
