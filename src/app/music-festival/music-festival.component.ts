@@ -1,5 +1,4 @@
 import {Component, OnInit, NgZone} from "@angular/core";
-import {Recipes} from "../recipes/recipes.model";
 import {MusicFestivalServices} from "../services/music-festival.services";
 import {HttpClient as Http} from "@angular/common/http";
 import {MusicRecordModel} from "./music-record.model";
@@ -12,7 +11,6 @@ import {MusicBandModel} from "./music-band.model";
   styleUrls: ['./music-festival.component.css']
 })
 export class MusicFestivalComponent implements OnInit{
-  selectedRecipe: Recipes;
   musicFestival
   records: MusicRecordModel[] = [];
   bands: MusicBandModel[] = [];
