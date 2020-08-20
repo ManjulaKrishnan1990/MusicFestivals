@@ -27,7 +27,7 @@ export class MusicFestivalServices {
   }
 
   private handleError(error: any): Promise<any> {
-    console.error('Animals API error', error);
+    console.error('Musical Records API failure', error);
     return Promise.reject(error);
   }
 

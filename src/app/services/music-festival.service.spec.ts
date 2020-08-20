@@ -44,4 +44,13 @@ describe('MusicFestivalServices', () => {
     expect(req.request.method).toBe("GET");
     req.flush(records);
   });
+
+  it('should throw an error if trying to search for not supported `what`', () => {
+    service.getDagetMusicFestivalData()
+      .subscribe(() => {}, err => {
+        expect(err).toBe(`Musical Records API failure`);
+      });
+
+    httpMock.expectNone(`http://e9ac531f4f4f.ngrok.io/MusicFestival/music/api/v1/festivals?1`);
+  });
 });

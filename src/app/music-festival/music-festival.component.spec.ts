@@ -10,6 +10,7 @@ import { HttpClientModule as HttpModule, HttpClientModule} from '@angular/common
 describe('MusicFestivalComponent', () => {
   let component: MusicFestivalComponent;
   let fixture: ComponentFixture<MusicFestivalComponent>;
+  let testBedService: MusicFestivalServices;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -24,10 +25,17 @@ describe('MusicFestivalComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MusicFestivalComponent);
     component = fixture.componentInstance;
+    testBedService = TestBed.get(MusicFestivalServices);
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Service injected via inject(...) and TestBed.get(...) should be the same instance',
+  inject([MusicFestivalServices], (injectService: MusicFestivalServices) => {
+      expect(injectService).toBe(testBedService);
+  })
+);
 });
